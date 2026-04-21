@@ -18,6 +18,6 @@ jobs:
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: Find
-          path: dist/"find browser.exe"
-          
+          name: MegaUltimate-Software
+          path: D:/a/Find-/Find-/dist/"find browser.exe"
+          q
