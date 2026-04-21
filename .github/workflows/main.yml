@@ -1,0 +1,23 @@
+name: Build EXE
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller google-api-python-client PyQt5
+      - name: Build EXE
+        run: |
+          pyinstaller --noconsole --onefile "find browser.py"
+      - name: Upload EXE
+        uses: actions/upload-artifact@v2
+        with:
+          name: MegaUltimate-Software
+          path: dist/"find browser.exe"
+          
