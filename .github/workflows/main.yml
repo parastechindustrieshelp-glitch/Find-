@@ -16,7 +16,7 @@ jobs:
         run: |
           pyinstaller --noconsole --onefile "find browser.py"
       - name: Upload EXE
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: MegaUltimate-Software
           path: dist/"find browser.exe"
